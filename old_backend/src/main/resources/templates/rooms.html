@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="'Hotel Rooms'">Hotel Rooms</title>
+    <link th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+<div th:replace="~{fragments :: navbar}"></div>
+<div class="container mt-4">
+    <h1>Hotel Rooms</h1>
+    <div th:if="${rooms}">
+        <ul class="list-group">
+            <li class="list-group-item" th:each="room : ${rooms}">
+                <span>Room Number: <span th:text="${room.roomNumber}"></span></span><br>
+                <span>Type: <span th:text="${room.type}"></span></span><br>
+                <span>Price: $<span th:text="${room.price}"></span></span><br>
+                <span>Available: <span th:text="${room.isAvailable ? 'Yes' : 'No'}"></span></span><br>
+                <form th:action="@{'/hotels/' + ${room.hotel.id} + '/reservation'}" method="post">
+                    <input type="hidden" name="roomId" th:value="${room.id}">
+                    <div class="mb-3">
+                        <label for="checkIn" class="form-label">Check-In</label>
+                        <input type="datetime-local" class="form-control" id="checkIn" name="checkIn" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="checkOut" class="form-label">Check-Out</label>
+                        <input type="datetime-local" class="form-control" id="checkOut" name="checkOut" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" th:disabled="${!room.isAvailable}">Book Room</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

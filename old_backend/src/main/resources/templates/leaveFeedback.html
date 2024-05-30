@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Leave Feedback</title>
+    <th:block th:replace="fragments :: navbar"></th:block>
+    <link th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js}"></script>
+    <style>
+        .rating {
+            direction: rtl;
+            display: inline-flex;
+        }
+        .rating input {
+            display: none;
+        }
+        .rating label {
+            font-size: 2rem;
+            color: #ddd;
+            cursor: pointer;
+        }
+        .rating input:checked ~ label {
+            color: #f7d106;
+        }
+        .rating label:hover,
+        .rating label:hover ~ label {
+            color: #f7d106;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Leave Feedback</h1>
+    <form th:action="@{'/hotels/' + ${hotelId} + '/feedback'}" th:object="${feedback}" method="post">
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <textarea class="form-control" id="comments" th:field="*{comments}"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="cleanlinessRating" class="form-label">Cleanliness Rating</label>
+            <div class="rating">
+                <input type="radio" id="cleanlinessRating5" name="cleanlinessRating" th:value="5" th:field="*{cleanlinessRating}"/>
+                <label for="cleanlinessRating5">&#9733;</label>
+                <input type="radio" id="cleanlinessRating4" name="cleanlinessRating" th:value="4" th:field="*{cleanlinessRating}"/>
+                <label for="cleanlinessRating4">&#9733;</label>
+                <input type="radio" id="cleanlinessRating3" name="cleanlinessRating" th:value="3" th:field="*{cleanlinessRating}"/>
+                <label for="cleanlinessRating3">&#9733;</label>
+                <input type="radio" id="cleanlinessRating2" name="cleanlinessRating" th:value="2" th:field="*{cleanlinessRating}"/>
+                <label for="cleanlinessRating2">&#9733;</label>
+                <input type="radio" id="cleanlinessRating1" name="cleanlinessRating" th:value="1" th:field="*{cleanlinessRating}"/>
+                <label for="cleanlinessRating1">&#9733;</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="serviceRating" class="form-label">Service Rating</label>
+            <div class="rating">
+                <input type="radio" id="serviceRating5" name="serviceRating" th:value="5" th:field="*{serviceRating}"/>
+                <label for="serviceRating5">&#9733;</label>
+                <input type="radio" id="serviceRating4" name="serviceRating" th:value="4" th:field="*{serviceRating}"/>
+                <label for="serviceRating4">&#9733;</label>
+                <input type="radio" id="serviceRating3" name="serviceRating" th:value="3" th:field="*{serviceRating}"/>
+                <label for="serviceRating3">&#9733;</label>
+                <input type="radio" id="serviceRating2" name="serviceRating" th:value="2" th:field="*{serviceRating}"/>
+                <label for="serviceRating2">&#9733;</label>
+                <input type="radio" id="serviceRating1" name="serviceRating" th:value="1" th:field="*{serviceRating}"/>
+                <label for="serviceRating1">&#9733;</label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body>
+</html>

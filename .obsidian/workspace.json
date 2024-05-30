@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "15d0055d6b16f316",
+    "type": "split",
+    "children": [
+      {
+        "id": "3922c5a3c344e32a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "316a795e1df9fa54",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e039fcf5f3f7f93f",
+    "type": "split",
+    "children": [
+      {
+        "id": "924b3f526f4e487c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7e413ef37e52530",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f0f240f083acf678",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2319c5dfb4492b8e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "2d7ea1f58007a35f",
+    "type": "split",
+    "children": [
+      {
+        "id": "3380bc18d6614fc7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b2eddbc0338e69db",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "197dd1fe3fad9c0b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2e6acf324a24a38e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b9110603e6ecdb9a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "316a795e1df9fa54",
+  "lastOpenFiles": [
+    "old_backend/build/classes/java/test/com/Hotel/hotel/service/impl/HotelServiceImplTest.class",
+    "old_backend/build/classes/java/test/com/Hotel/hotel/models/hotel/Hotel.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/ReservationServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/UserServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/UserDetailsServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/RoomServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/HotelServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/service/impl/FeedbackServiceImpl.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/models/hotel/Feedback.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/models/hotel/RoomType.class",
+    "old_backend/build/classes/java/main/com/Hotel/hotel/models/hotel/Hotel.class",
+    "old_backend/HELP.md",
+    "hotel/HELP.md",
+    "9.png",
+    "8.png",
+    "7.png",
+    "6.png",
+    "5.png",
+    "4.png",
+    "README.md",
+    "3.png",
+    "2.png",
+    "1.png"
+  ]
+}

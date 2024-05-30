@@ -1,0 +1,328 @@
+[
+    {
+        "id": 1,
+        "name": "Charming Mansion",
+        "latitude": 47.028360480815074,
+        "longitude": 23.792371131154123,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "MATRIMONIAL",
+                "price": 143.4406335464995,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 2,
+                "type": "SUITE",
+                "price": 99.45802979892491,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 3,
+                "type": "SUITE",
+                "price": 127.66999515829482,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Peaceful House",
+        "latitude": 47.08326754771627,
+        "longitude": 23.85658447768661,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "DOUBLE",
+                "price": 84.69670405753871,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "DOUBLE",
+                "price": 137.32523453846144,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 3,
+                "type": "SUITE",
+                "price": 94.04805897159386,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Cozy Retreat",
+        "latitude": 46.98971712522674,
+        "longitude": 23.49852534383117,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "MATRIMONIAL",
+                "price": 71.24237688849138,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 2,
+                "type": "MATRIMONIAL",
+                "price": 76.88259993634485,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "DOUBLE",
+                "price": 147.65662978284465,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Peaceful Retreat",
+        "latitude": 46.62219041542905,
+        "longitude": 23.92537651331086,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "SUITE",
+                "price": 68.33041492812481,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "MATRIMONIAL",
+                "price": 60.70193951373089,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 3,
+                "type": "DOUBLE",
+                "price": 115.27280620215343,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Peaceful Mansion",
+        "latitude": 46.82403709191027,
+        "longitude": 23.721032084004136,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "DOUBLE",
+                "price": 124.45804886470803,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 2,
+                "type": "MATRIMONIAL",
+                "price": 80.61061045819116,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "MATRIMONIAL",
+                "price": 96.44229917287706,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Cozy Inn",
+        "latitude": 47.04057871694679,
+        "longitude": 23.998319534234987,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "SINGLE",
+                "price": 118.89684587218427,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "MATRIMONIAL",
+                "price": 64.47181060165539,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "DOUBLE",
+                "price": 58.72664802465797,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Classic Haven",
+        "latitude": 46.91643560535978,
+        "longitude": 23.993425180903323,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "MATRIMONIAL",
+                "price": 57.4559748540424,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "SINGLE",
+                "price": 69.28545125049453,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "DOUBLE",
+                "price": 145.64125018560497,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Sunny Inn",
+        "latitude": 46.789925925071785,
+        "longitude": 23.557029639964465,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "DOUBLE",
+                "price": 135.22592393385906,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "DOUBLE",
+                "price": 103.34581941486978,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "SUITE",
+                "price": 139.15418317564473,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Charming Lodge",
+        "latitude": 47.01411532324276,
+        "longitude": 23.35948761620053,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "SINGLE",
+                "price": 120.11096289581963,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 2,
+                "type": "DOUBLE",
+                "price": 79.38530454201158,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "SUITE",
+                "price": 118.5354728942884,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Elegant Lodge",
+        "latitude": 46.41940940475021,
+        "longitude": 23.78001880680524,
+        "rooms": [
+            {
+                "roomNumber": 1,
+                "type": "DOUBLE",
+                "price": 60.206448548093775,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 2,
+                "type": "MATRIMONIAL",
+                "price": 142.2321333317911,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 3,
+                "type": "SINGLE",
+                "price": 113.57163685163681,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Hotel Ramada",
+        "latitude": 46.764654252624204,
+        "longitude": 23.598674125224626,
+        "rooms": [
+            {
+                "roomNumber": 210,
+                "type": 2,
+                "price": 200,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 125,
+                "type": 1,
+                "price": 350,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 87,
+                "type": 1,
+                "price": 300,
+                "isAvailable": false
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Grand Hotel Italia",
+        "latitude": 46.7522792440665,
+        "longitude": 23.605990381045697,
+        "rooms": [
+            {
+                "roomNumber": 41,
+                "type": 3,
+                "price": 240,
+                "isAvailable": true
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Hampton by Hilton",
+        "latitude": 46.77539900854998,
+        "longitude": 23.60182699638966,
+        "rooms": [
+            {
+                "roomNumber": 32,
+                "type": 2,
+                "price": 410,
+                "isAvailable": false
+            },
+            {
+                "roomNumber": 21,
+                "type": 2,
+                "price": 350,
+                "isAvailable": true
+            },
+            {
+                "roomNumber": 64,
+                "type": 3,
+                "price": 300,
+                "isAvailable": true
+            }
+        ]
+    }
+]

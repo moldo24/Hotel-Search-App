@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Reservations</title>
+    <link th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}" rel="stylesheet"/>
+    <!-- Add CSRF Meta Tags -->
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+<body>
+<div th:replace="fragments::navbar"></div>
+<div class="container mt-4">
+    <h1>Your Reservations</h1>
+    <div th:if="${#lists.isEmpty(reservations)}">
+        <p>You have no reservations.</p>
+    </div>
+    <div th:unless="${#lists.isEmpty(reservations)}">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Reservation ID</th>
+                <th>Hotel Name</th>
+                <th>Room Number</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="reservation : ${reservations}">
+                <td th:text="${reservation.id}"></td>
+                <td th:text="${reservation.hotel.name}"></td>
+                <td th:text="${reservation.roomNumber}"></td>
+                <td th:text="${#temporals.format(reservation.checkIn, 'dd/MM/yyyy HH:mm')}"></td>
+                <td th:text="${#temporals.format(reservation.checkOut, 'dd/MM/yyyy HH:mm')}"></td>
+                <td>
+                    <button class="btn btn-danger"
+                            th:data-reservation-id="${reservation.id}"
+                            th:data-check-in="${#temporals.format(reservation.checkIn, 'yyyy-MM-dd HH:mm')}"
+                            onclick="cancelReservation(this)">Cancel</button>
+                    <button class="btn btn-warning"
+                            th:data-reservation-id="${reservation.id}"
+                            th:data-hotel-id="${reservation.hotel.id}"
+                            onclick="changeRoom(this)">Change Room</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.bundle.min.js}"></script>
+<script>
+    function getCsrfToken() {
+        return document.querySelector('meta[name="_csrf"]').getAttribute('content');
+    }
+
+    function getCsrfHeader() {
+        return document.querySelector('meta[name="_csrf_header"]').getAttribute('content');
+    }
+
+    function cancelReservation(button) {
+        const reservationId = button.getAttribute('data-reservation-id');
+        const checkIn = button.getAttribute('data-check-in');
+        const checkInDate = new Date(checkIn);
+        const now = new Date();
+        const twoHoursBeforeCheckIn = new Date(checkInDate.getTime() - 2 * 60 * 60 * 1000);
+
+        if (now >= twoHoursBeforeCheckIn) {
+            alert("You cannot cancel the reservation at two hours before check-in.");
+            return;
+        }
+
+        fetch(`/hotels/reservation/${reservationId}`, {
+            method: 'DELETE',
+            headers: {
+                [getCsrfHeader()]: getCsrfToken()
+            }
+        }).then(response => {
+            if (response.ok) {
+                location.reload();
+            } else {
+                alert("Failed to cancel the reservation.");
+            }
+        });
+    }
+
+    function changeRoom(button) {
+        const reservationId = button.getAttribute('data-reservation-id');
+        const hotelId = button.getAttribute('data-hotel-id');
+        const newRoomNumber = prompt("Enter new room number:");
+        if (newRoomNumber) {
+            fetch(`/hotels/reservations/changeRoom`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    [getCsrfHeader()]: getCsrfToken()
+                },
+                body: JSON.stringify({
+                    reservationId: reservationId,
+                    newRoomNumber: newRoomNumber,
+                    hotelId: hotelId
+                })
+            }).then(response => {
+                if (response.ok) {
+                    location.reload();
+                } else {
+                    alert("Failed to change the room.");
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>
